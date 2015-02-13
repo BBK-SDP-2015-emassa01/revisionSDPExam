@@ -1,5 +1,13 @@
 package revisionWeek6
 
+//NOTATION IN SCALA
+//T extends xxxx
+//T extends ?
+//<:  what is this
+//>: or this
+//
+//<% view bound!
+
 //import scala.annoatation.tailrec
 
 //object Polymorphic extends App{
@@ -42,7 +50,23 @@ object Polymorphic extends App{
      helper(0)
   }
   
-  def isSorted[T](as:Array[T], ordered :(T,T) => Boolean): Boolean = {
+//  def isSorted[T](as:Array[T], ordered :(T,T) => Boolean): Boolean = {
+//    /*
+//     * the array is not sorted if you encounter 2 elements for which 
+//     * ordered(first, second) returns false.
+//     */
+//    def helper(n:Int): Boolean = 
+//      if (n >= as.length-1) true //got to the end so it works!
+//      else if (ordered(as(n), as(n+1))) false 
+//    else helper(n+1)
+//    
+//      helper(0) //starts the helper, calls it!
+//  } 
+  
+  //CHECK THIS OUT!
+  //work more with the above to make it implement comparable! IMPLICIT!!! SHOULD WOORK WITH EVERYTHING
+  //THAT HAS A COMPARABLE. TYPE SYSTEM IS TIGHT IN SCALA
+  def isSorted[T<% Comparable[T]](as:Array[T], ordered :(T,T) => Boolean): Boolean = {
     /*
      * the array is not sorted if you encounter 2 elements for which 
      * ordered(first, second) returns false.
