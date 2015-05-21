@@ -51,9 +51,11 @@ functiony(x => 1+x/2)(1);System.out.println("""res3: Double = """ + $show(res$3)
 
 def averageDamp(f: Double=>Double)(value:Double) = (value + f(value))/2;System.out.println("""averageDamp: (f: Double => Double)(value: Double)Double""");$skip(56); 
 def sqrt(x:Double) = functiony(averageDamp(y=> x/y))(1);System.out.println("""sqrt: (x: Double)Double""");$skip(19); val res$4 = 
-           sqrt(2);System.out.println("""res4: Double = """ + $show(res$4))}
+           sqrt(2);System.out.println("""res4: Double = """ + $show(res$4));$skip(39); val res$5 = 
 
 
+List(10, 5, 8, 1, 7).sortWith(_ > _);System.out.println("""res5: List[Int] = """ + $show(res$5));$skip(94); val res$6 = 
 
+List(List(1,2,3), List(5,6,7), List(2), List(1,1), List(1,45)).sortWith(_.length > _.length);System.out.println("""res6: List[List[Int]] = """ + $show(res$6))}
 
 }

@@ -58,6 +58,10 @@ def sqrt(x:Double) = functiony(averageDamp(y=> x/y))(1)
            sqrt(2)                                //> res4: Double = 1.4166666666666665
 
 
+List(10, 5, 8, 1, 7).sortWith(_ > _)              //> res5: List[Int] = List(10, 8, 7, 5, 1)
 
+List(List(1,2,3), List(5,6,7), List(2), List(1,1), List(1,45)).sortWith(_.length > _.length)
+                                                  //> res6: List[List[Int]] = List(List(1, 2, 3), List(5, 6, 7), List(1, 1), List
+                                                  //| (1, 45), List(2))
 
 }
