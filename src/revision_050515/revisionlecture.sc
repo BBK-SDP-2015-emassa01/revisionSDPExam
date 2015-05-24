@@ -19,4 +19,12 @@ object revisionlecture {
                                                   //> res0: List[Int] = List(28, 27, 36)
   
   println(totalAge)                               //> 0
+  
+    def listReduce(list: List[Int], fn : Int => Boolean): List[Int] = list match {
+    case Nil => Nil
+    case s::ss => if (fn(s)) s:: listReduce(ss, fn) else listReduce(ss, fn)
+  }                                               //> listReduce: (list: List[Int], fn: Int => Boolean)List[Int]
+  
+  val listy = List(1,2,3,4,5,6,7,8,9,10)          //> listy  : List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+  listReduce(listy, x => x%2 == 0)                //> res1: List[Int] = List(2, 4, 6, 8, 10)
 }

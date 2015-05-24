@@ -56,6 +56,8 @@ def sqrt(x:Double) = functiony(averageDamp(y=> x/y))(1);System.out.println("""sq
 
 List(10, 5, 8, 1, 7).sortWith(_ > _);System.out.println("""res5: List[Int] = """ + $show(res$5));$skip(94); val res$6 = 
 
-List(List(1,2,3), List(5,6,7), List(2), List(1,1), List(1,45)).sortWith(_.length > _.length);System.out.println("""res6: List[List[Int]] = """ + $show(res$6))}
+List(List(1,2,3), List(5,6,7), List(2), List(1,1), List(1,45)).sortWith(_.length > _.length);System.out.println("""res6: List[List[Int]] = """ + $show(res$6));$skip(29); 
+def listSort(list : List[T]);System.out.println("""listSort: (list: List[<error>])Unit""")}
+                                                  
 
 }
